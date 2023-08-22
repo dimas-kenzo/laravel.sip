@@ -87,20 +87,6 @@ class TestingResource extends Resource
             ]);
     }
 
-    protected function formatWorkExperience($record)
-    {
-        $workExperience = $record->workExperience;
-        $formattedExperience = '';
-
-        foreach ($workExperience as $experience) {
-            $formattedExperience .= "Pekerjaan Sebelumnya: {$experience['pekerjaan_sebelumnya']}, Lama Bekerja: {$experience['lama_bekerja']}\n";
-        }
-
-        return $formattedExperience;
-    }
-
-
-
     public static function getRelations(): array
     {
         return [
